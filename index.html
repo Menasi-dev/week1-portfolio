@@ -172,5 +172,41 @@
             <a href="#" class="btn btn-outline">Contact Me</a>
         </div>
     </div>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const contactBtn = document.querySelector('.btn-outline');
+        
+        // Create a message element (but don't show it yet)
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = '📬 Reach me at: fmenasi3392@gmail.com';
+        messageDiv.style.marginTop = '20px';
+        messageDiv.style.padding = '10px';
+        messageDiv.style.backgroundColor = '#e8f4fd';
+        messageDiv.style.borderRadius = '8px';
+        messageDiv.style.color = '#333';
+        messageDiv.style.textAlign = 'center';
+        messageDiv.style.display = 'none'; // Hidden initially
+        
+        // Add it to the card
+        const card = document.querySelector('.card');
+        card.appendChild(messageDiv);
+        
+        // Show/hide message when button is clicked
+        contactBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Toggle visibility
+            if (messageDiv.style.display === 'none') {
+                messageDiv.style.display = 'block';
+                contactBtn.textContent = 'Hide Contact';
+            } else {
+                messageDiv.style.display = 'none';
+                contactBtn.textContent = 'Contact Me';
+            }
+        });
+        
+    });
+</script>
 </body>
 </html>
