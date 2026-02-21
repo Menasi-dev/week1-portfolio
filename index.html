@@ -4,9 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menasi - Web App Developer</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .title {
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .bio {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+        
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+            
+            .links {
+                flex-direction: column;
+            }
+            
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Menasi</h1>
-    <p>Web App Developer in Training</p>
+    <div class="card">
+        <h1>Menasi</h1>
+        <div class="title">Web App Developer in Training</div>
+        
+        <p class="bio">
+            🇲🇼 CS student in Malawi building web applications that solve real problems. 
+            Passionate about creating apps that work beautifully on both PC and phone.
+        </p>
+        
+        <div class="skills">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React (learning)</span>
+            <span class="skill-tag">Node.js (learning)</span>
+            <span class="skill-tag">MongoDB (learning)</span>
+        </div>
+        
+        <div class="links">
+            <a href="https://github.com/menasi-dev" class="btn btn-primary" target="_blank">GitHub</a>
+            <a href="#" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
 </body>
 </html>
